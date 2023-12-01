@@ -1,0 +1,138 @@
+<html>
+<head>
+    <style>
+        /* Estilos CSS para la página web */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #CCCCCC;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .card-image {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .card-price {
+            color: #FF0000;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card-button:hover {
+            background-color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Página web sobre ropa</h1>
+    <div class="container">
+        <div class="grid">
+            <!-- Código HTML para cada tarjeta de producto -->
+            <div class="card">
+                <img src="https://i.imgur.com/4J6aY8S.jpg" alt="Camiseta blanca" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Camiseta blanca</p>
+                    <p class="card-price">9,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/0j8QZ2w.jpg" alt="Pantalón vaquero" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Pantalón vaquero</p>
+                    <p class="card-price">19,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/7xX6z8y.jpg" alt="Chaqueta de cuero" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Chaqueta de cuero</p>
+                    <p class="card-price">49,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/9qgWfQs.jpg" alt="Vestido rojo" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Vestido rojo</p>
+                    <p class="card-price">29,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/6lLm6YR.jpg" alt="Falda de flores" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Falda de flores</p>
+                    <p class="card-price">14,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.imgur.com/8ZtY0gM.jpg" alt="Zapatillas de deporte" class="card-image">
+                <div class="card-content">
+                    <p class="card-title">Zapatillas de deporte</p>
+                    <p class="card-price">39,99€</p>
+                    <a href="#" class="card-button">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Código JavaScript para la página web
+        // Por ejemplo, se puede añadir una función para mostrar un mensaje al hacer clic en el botón de comprar
+        var buttons = document.getElementsByClassName("card-button"); // Seleccionar todos los botones de comprar
+        for (var i = 0; i < buttons.length; i++) { // Recorrer todos los botones
+            buttons[i].addEventListener("click", function(event) { // Añadir un evento de clic a cada botón
+                event.preventDefault(); // Evitar que se abra el enlace
+                var title = this.parentElement.querySelector(".card-title").textContent; // Obtener el título del producto
+                alert("Has añadido el producto " + title + " al carrito"); // Mostrar un mensaje de alerta
+            });
+        }
+    </script>
+</body>
+</html>

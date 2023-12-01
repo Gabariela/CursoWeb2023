@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #board {
+ width: 400px;
+ height: 400px;
+ margin: 0 auto;
+ position: relative;
+}
+
+.square {
+ width: 100px;
+ height: 100px;
+ border: 1px solid black;
+ float: left;
+ position: relative;
+}
+
+.piece {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+}
+    </style>
+</head>
+<body>
+ <div id="board"></div>
+ <script src="chess.js"></script>
+
+ // Set up the board and pieces
+let board = Array(8).fill(null).map(() => Array(8).fill(null));
+
+let pieces = [
+ { type: 'rook', color: 'black' },
+ { type: 'knight', color: 'black' },
+ { type: 'bishop', color: 'black' },
+ { type: 'queen', color: 'black' },
+ { type: 'king', color: 'black' },
+ { type: 'bishop', color: 'black' },
+ { type: 'knight', color: 'black' },
+ { type: 'rook', color: 'black' },
+ // ... (rest of the pieces)
+];
+
+// Create the HTML for the board and pieces
+let boardHtml = '';
+
+for (let i = 0; i < 8; i++) {
+ for (let j = 0; j < 8; j++) {
+    boardHtml += '<div class="square" data-x="' + i + '" data-y="' + j + '"></div>';
+ }
+}
+
+document.getElementById('board').innerHTML = boardHtml;
+
+// Add the pieces to the board
+let squares = document.getElementsByClassName('square');
+
+for (let i = 0; i < pieces.length; i++) {
+ let piece = pieces[i];
+ let square = squares[i];
+ square.appendChild(createPieceHtml(piece));
+}
+
+// Create the HTML for a piece
+function createPieceHtml(piece) {
+ let pieceHtml = document.createElement('div');
+ pieceHtml.className = 'piece ' + piece.type + ' ' + piece.color;
+ return pieceHtml;
+}
+</body>
+</html>

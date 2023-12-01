@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas</title>
+    <style>
+        thead{
+            background-color: orange;
+            color: white;
+        }
+        tbody tr:nth-child(even){
+         
+            background-color: rgb(0 0 0 / 0.3)
+        }
+        tfoot{
+         background-color: black;
+         color: white;
+        }
+        td, th{
+            border: 2px groove black;
+            padding: 8px;
+        }
+        table{
+            margin: auto;
+            border-spacing: 7px;
+            width: 50%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Luis</td>
+                <td>Gómez Gómez</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Plaza de Toros</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Felipe</td>
+                <td>Conejo Abil</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>Gómez Gómez</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Plaza de Toros</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>Felipe</td>
+                <td>Conejo Abil</td>
+                <td>33</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> 
+                <td>Nombre</td>
+                <td>Apellidos</td>
+                <td>Edad</td>
+            </tr>
+        </tfoot>
+        <caption>Alumnos del curso de italiano</caption>
+    </table>
+    
+</body>
+</html>
